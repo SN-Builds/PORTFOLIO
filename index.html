@@ -16,53 +16,97 @@
             <button onclick="showTab('projects')">Portfolio</button>
             <button onclick="showTab('contact')">Contact</button>
         </nav>
-        <button class="contact-btn">Get in Touch</button>
+        <button class="contact-btn" onclick="showTab('contact')">Get in Touch</button>
     </header>
 
     <main>
         <!-- HOME SECTION -->
         <section id="home" class="content active">
             <div class="hero-container">
-                <div class="hero-image-wrapper">
-                    <!-- Replace 'your-photo.jpg' with your actual image file -->
-                    <img src="your-photo.jpg" alt="Sohan Nale" class="hero-img">
-                    <div class="green-highlight"></div>
-                </div>
-                
                 <div class="hero-text">
                     <h1>Sohan<br>Nale</h1>
                     <p class="hero-description">
-                        Hello, my name is Sohan Nale. I am an Electronics and Telecommunication Engineering student 
-                        specializing in Embedded Systems and IoT Solutions.
+                        Electronics and Telecommunication Engineering student specializing in Embedded Systems and IoT Solutions.
                     </p>
                 </div>
+                <div class="hero-image-wrapper">
+                    <img src="your-photo.jpg" alt="Sohan Nale" class="hero-img">
+                    <div class="green-highlight"></div>
+                </div>
             </div>
-            <div class="scroll-indicator">0</div>
         </section>
 
-        <!-- OTHER SECTIONS -->
+        <!-- ABOUT SECTION -->
         <section id="about" class="content">
-            <h2>About Me</h2>
-            <p>Electronics student at MIT Academy of Engineering.</p>
-        </section>
-
-        <section id="projects" class="content">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <article class="project-card"><h3>Gesture Control</h3></article>
-                <article class="project-card"><h3>SwiftPass App</h3></article>
-                <article class="project-card"><h3>Street Light Dimmer</h3></article>
+            <div class="section-container">
+                <h2>Turning Ideas into Hardware</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am an ENTC Engineering student at MIT Academy of Engineering (MITAOE) with a passion for physical computing.</p>
+                        <p>I focus on bridging the gap between abstract logic and tangible hardware through embedded systems and circuit design.</p>
+                    </div>
+                    <div class="skills-list">
+                        <h3>Core Skills</h3>
+                        <ul>
+                            <li><b>Tools:</b> Proteus, KiCAD, NI Multisim</li>
+                            <li><b>Dev:</b> Python, C Language, ESP32, Arduino</li>
+                            <li><b>Hardware:</b> PCB Design, Soldering, Circuit Analysis</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="content">
+            <div class="section-container">
+                <h2>Selected Projects</h2>
+                <div class="project-grid">
+                    <!-- NEW PIR PROJECT -->
+                    <article class="project-card">
+                        <div class="project-tag">Hardware</div>
+                        <h3>PIR Motion Sensor Alarm</h3>
+                        <p>Designed a custom PCB and performed all soldering for a real-time security system. Features automated alert triggers using PIR modules.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-tag">Embedded</div>
+                        <h3>Gesture-Controlled System</h3>
+                        <p>Engineered a transmitter utilizing the ESP32 and motion-tracking logic to translate hand gestures into wireless control signals.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-tag">Software</div>
+                        <h3>SwiftPass App</h3>
+                        <p>A digital logging application developed to efficiently manage and monitor hostel entry/exit timestamps via QR.</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-tag">Automation</div>
+                        <h3>Rain-Sensing System</h3>
+                        <p>Automated moisture-sensing system using Arduino to trigger mechanical responses upon detecting rainfall.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
         <section id="contact" class="content">
-            <h2>Contact</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div class="section-container">
+                <h2>Let's Collaborate</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p><b>Email:</b> sohannale603@gmail.com</p>
+                        <p><b>Phone:</b> +91 73502 25512</p>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -71,6 +115,7 @@
             const sections = document.querySelectorAll('.content');
             sections.forEach(s => s.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
+            window.scrollTo(0,0);
         }
     </script>
 </body>
