@@ -3,101 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohan Rajesh Nale | Portfolio</title>
+    <title>Sohan Nale | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="nav">
+        <div class="logo">●</div>
         <nav>
             <button onclick="showTab('home')">Home</button>
             <button onclick="showTab('about')">About</button>
-            <button onclick="showTab('projects')">Projects</button>
+            <button onclick="showTab('projects')">Portfolio</button>
             <button onclick="showTab('contact')">Contact</button>
         </nav>
+        <button class="contact-btn">Get in Touch</button>
     </header>
 
     <main>
         <!-- HOME SECTION -->
         <section id="home" class="content active">
-            <h1>Sohan Nale</h1>
-            <p class="subtitle">Future Electronics Engineer specializing in Embedded Systems and IoT Solutions.</p>
-            <p class="hero-description">Exploring the intersection of hardware and software to build the next generation of smart devices.</p>
+            <div class="hero-container">
+                <div class="hero-image-wrapper">
+                    <!-- Replace 'your-photo.jpg' with your actual image file -->
+                    <img src="your-photo.jpg" alt="Sohan Nale" class="hero-img">
+                    <div class="green-highlight"></div>
+                </div>
+                
+                <div class="hero-text">
+                    <h1>Sohan<br>Nale</h1>
+                    <p class="hero-description">
+                        Hello, my name is Sohan Nale. I am an Electronics and Telecommunication Engineering student 
+                        specializing in Embedded Systems and IoT Solutions.
+                    </p>
+                </div>
+            </div>
+            <div class="scroll-indicator">0</div>
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- OTHER SECTIONS -->
         <section id="about" class="content">
-            <h2>Turning Ideas into Hardware</h2>
-            <article class="about-text">
-                <p>I am an Electronics and Telecommunication Engineering student with a passion for physical computing and hardware innovation.</p>
-                <p>Currently, I am building my proficiency in microcontrollers. Whether it's simulating circuits in Proteus or developing IoT systems with ESP32 and Arduino, I thrive on creating reliable hardware solutions.</p>
-            </article>
-
-            <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="cta-btn">View My Resume</a>
-
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h3>Design Tools</h3>
-                    <p>Proteus, KiCAD, NI Multisim</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Development</h3>
-                    <p>Python, C Language, HTML/CSS/JS</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Hardware</h3>
-                    <p>ESP32, Arduino, Raspberry Pi</p>
-                </div>
-            </div>
+            <h2>About Me</h2>
+            <p>Electronics student at MIT Academy of Engineering.</p>
         </section>
 
-        <!-- PROJECTS SECTION -->
         <section id="projects" class="content">
-            <h2>Selected Projects</h2>
-            <div class="project-list">
-                <article class="project-card">
-                    <h3>Gesture-Controlled System</h3>
-                    <p>Engineered a transmitter utilizing the ESP32 microcontroller and motion-tracking logic.</p>
-                    <a href="#">View Source Code</a>
-                </article>
-
-                <article class="project-card">
-                    <h3>Rain-Sensing Automation</h3>
-                    <p>Developed an automated system using Arduino to trigger mechanical responses upon detecting rainfall.</p>
-                    <a href="#">View Project</a>
-                </article>
-
-                <article class="project-card">
-                    <h3>Hostel Management App</h3>
-                    <p>A digital logging application to efficiently manage and monitor student movement timestamps.</p>
-                    <a href="#">Live Demo</a>
-                </article>
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <article class="project-card"><h3>Gesture Control</h3></article>
+                <article class="project-card"><h3>SwiftPass App</h3></article>
+                <article class="project-card"><h3>Street Light Dimmer</h3></article>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact" class="content">
-            <h2>Let's Collaborate</h2>
-            <p>Always looking for interesting projects and hardware challenges.</p>
-            
+            <h2>Contact</h2>
             <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="cta-btn">Send Message</button>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Sohan Rajesh Nale. Built with Passion.</p>
-    </footer>
 
     <script>
         function showTab(tabId) {
-            const contents = document.querySelectorAll(".content");
-            contents.forEach(content => content.classList.remove("active"));
-            document.getElementById(tabId).classList.add("active");
-            window.scrollTo(0,0); 
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(s => s.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
         }
     </script>
 </body>
