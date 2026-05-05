@@ -30,8 +30,8 @@
                     </p>
                 </div>
                 <div class="hero-image-wrapper">
+                    <!-- Use your neon-bordered image here -->
                     <img src="your-photo.jpg" alt="Sohan Nale" class="hero-img">
-                    <div class="green-highlight"></div>
                 </div>
             </div>
         </section>
@@ -39,19 +39,25 @@
         <!-- ABOUT SECTION -->
         <section id="about" class="content">
             <div class="section-container">
-                <h2>Turning Ideas into Hardware</h2>
+                <h2 class="section-title">Turning Ideas into Hardware</h2>
                 <div class="about-grid">
-                    <div class="about-text">
+                    <div class="about-text-content">
                         <p>I am an ENTC Engineering student at MIT Academy of Engineering (MITAOE) with a passion for physical computing.</p>
                         <p>I focus on bridging the gap between abstract logic and tangible hardware through embedded systems and circuit design.</p>
+                        
+                        <div class="resume-wrapper">
+                            <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="resume-btn">
+                                Download Resume
+                            </a>
+                        </div>
                     </div>
-                    <div class="skills-list">
+                    <div class="skills-column">
                         <h3>Core Skills</h3>
-                        <ul>
-                            <li><b>Tools:</b> Proteus, KiCAD, NI Multisim</li>
-                            <li><b>Dev:</b> Python, C Language, ESP32, Arduino</li>
-                            <li><b>Hardware:</b> PCB Design, Soldering, Circuit Analysis</li>
-                        </ul>
+                        <div class="skill-group">
+                            <p><b>Tools:</b> Proteus, KiCAD, NI Multisim</p>
+                            <p><b>Dev:</b> Python, C Language, ESP32, Arduino</p>
+                            <p><b>Hardware:</b> PCB Design, Soldering, Circuit Analysis</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,31 +66,30 @@
         <!-- PROJECTS SECTION -->
         <section id="projects" class="content">
             <div class="section-container">
-                <h2>Selected Projects</h2>
+                <h2 class="section-title">Selected Projects</h2>
                 <div class="project-grid">
-                    <!-- NEW PIR PROJECT -->
                     <article class="project-card">
                         <div class="project-tag">Hardware</div>
                         <h3>PIR Motion Sensor Alarm</h3>
-                        <p>Designed a custom PCB and performed all soldering for a real-time security system. Features automated alert triggers using PIR modules.</p>
+                        <p>A real-time security system detecting infrared signatures of movement. Features a logic-controlled circuit for alerts. I engineered the signal path and designed/soldered the custom PCB.</p>
                     </article>
 
                     <article class="project-card">
                         <div class="project-tag">Embedded</div>
                         <h3>Gesture-Controlled System</h3>
-                        <p>Engineered a transmitter utilizing the ESP32 and motion-tracking logic to translate hand gestures into wireless control signals.</p>
+                        <p>Engineered an ESP32-based transmitter with motion-tracking logic to translate hand gestures into wireless control signals for system attachments.</p>
                     </article>
 
                     <article class="project-card">
                         <div class="project-tag">Software</div>
                         <h3>SwiftPass App</h3>
-                        <p>A digital logging application developed to efficiently manage and monitor hostel entry/exit timestamps via QR.</p>
+                        <p>A digital logging application developed to efficiently manage and monitor hostel entry/exit timestamps via QR code generation.</p>
                     </article>
 
                     <article class="project-card">
                         <div class="project-tag">Automation</div>
                         <h3>Rain-Sensing System</h3>
-                        <p>Automated moisture-sensing system using Arduino to trigger mechanical responses upon detecting rainfall.</p>
+                        <p>Automated moisture-sensing system using Arduino to trigger mechanical responses (DC motor) upon detecting rainfall levels.</p>
                     </article>
                 </div>
             </div>
@@ -93,9 +98,10 @@
         <!-- CONTACT SECTION -->
         <section id="contact" class="content">
             <div class="section-container">
-                <h2>Let's Collaborate</h2>
+                <h2 class="section-title">Let's Collaborate</h2>
                 <div class="contact-wrapper">
                     <div class="contact-info">
+                        <p>Always looking for interesting projects and hardware challenges.</p>
                         <p><b>Email:</b> sohannale603@gmail.com</p>
                         <p><b>Phone:</b> +91 73502 25512</p>
                     </div>
