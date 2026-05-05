@@ -22,42 +22,39 @@
     <main>
         <!-- HOME SECTION -->
         <section id="home" class="content active">
-            <div class="hero-container">
-                <div class="hero-text">
-                    <h1>Sohan<br>Nale</h1>
-                    <p class="hero-description">
-                        Electronics and Telecommunication Engineering student specializing in Embedded Systems and IoT Solutions.
-                    </p>
+            <div class="hero-layout">
+                <div class="hero-text-block">
+                    <h1 class="hero-name">Sohan<br>Nale</h1>
+                    <div class="hero-meta">
+                        <span class="dot-decorator"></span>
+                        <p class="hero-subtext">
+                            ENTC Engineering Student<br>
+                            MIT Academy of Engineering
+                        </p>
+                    </div>
                 </div>
-                <div class="hero-image-wrapper">
-                    <!-- Use your neon-bordered image here -->
-                    <img src="your-photo.jpg" alt="Sohan Nale" class="hero-img">
+                
+                <div class="hero-visual">
+                    <div class="edge-fade"></div>
+                    <img src="your-photo.jpg" alt="Sohan Nale" class="hero-portrait">
                 </div>
             </div>
         </section>
 
         <!-- ABOUT SECTION -->
         <section id="about" class="content">
-            <div class="section-container">
-                <h2 class="section-title">Turning Ideas into Hardware</h2>
-                <div class="about-grid">
-                    <div class="about-text-content">
-                        <p>I am an ENTC Engineering student at MIT Academy of Engineering (MITAOE) with a passion for physical computing.</p>
-                        <p>I focus on bridging the gap between abstract logic and tangible hardware through embedded systems and circuit design.</p>
-                        
-                        <div class="resume-wrapper">
-                            <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="resume-btn">
-                                Download Resume
-                            </a>
-                        </div>
+            <div class="minimal-container">
+                <h2 class="ghost-title">Expertise</h2>
+                <div class="split-content">
+                    <div class="bio-main">
+                        <p class="lead">Bridging abstract logic and tangible hardware.</p>
+                        <p>I focus on embedded systems and circuit design to create reliable IoT solutions.</p>
+                        <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="minimal-btn">Download CV</a>
                     </div>
-                    <div class="skills-column">
-                        <h3>Core Skills</h3>
-                        <div class="skill-group">
-                            <p><b>Tools:</b> Proteus, KiCAD, NI Multisim</p>
-                            <p><b>Dev:</b> Python, C Language, ESP32, Arduino</p>
-                            <p><b>Hardware:</b> PCB Design, Soldering, Circuit Analysis</p>
-                        </div>
+                    <div class="skills-sidebar">
+                        <div class="skill-item"><span>Design</span> Proteus, KiCAD, Multisim</div>
+                        <div class="skill-item"><span>Embedded</span> Python, C, ESP32, Arduino</div>
+                        <div class="skill-item"><span>Hardware</span> PCB Design, Soldering</div>
                     </div>
                 </div>
             </div>
@@ -65,31 +62,23 @@
 
         <!-- PROJECTS SECTION -->
         <section id="projects" class="content">
-            <div class="section-container">
-                <h2 class="section-title">Selected Projects</h2>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <div class="project-tag">Hardware</div>
-                        <h3>PIR Motion Sensor Alarm</h3>
-                        <p>A real-time security system detecting infrared signatures of movement. Features a logic-controlled circuit for alerts. I engineered the signal path and designed/soldered the custom PCB.</p>
+            <div class="minimal-container">
+                <h2 class="ghost-title">Selected</h2>
+                <div class="works-grid">
+                    <article class="work-item">
+                        <span class="work-num">01</span>
+                        <h3>PIR Motion Alarm</h3>
+                        <p>Real-time security system featuring a logic-controlled circuit and custom PCB.</p>
                     </article>
-
-                    <article class="project-card">
-                        <div class="project-tag">Embedded</div>
-                        <h3>Gesture-Controlled System</h3>
-                        <p>Engineered an ESP32-based transmitter with motion-tracking logic to translate hand gestures into wireless control signals for system attachments.</p>
+                    <article class="work-item">
+                        <span class="work-num">02</span>
+                        <h3>Gesture Control</h3>
+                        <p>ESP32-based transmitter translating motion to wireless control signals.</p>
                     </article>
-
-                    <article class="project-card">
-                        <div class="project-tag">Software</div>
+                    <article class="work-item">
+                        <span class="work-num">03</span>
                         <h3>SwiftPass App</h3>
-                        <p>A digital logging application developed to efficiently manage and monitor hostel entry/exit timestamps via QR code generation.</p>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-tag">Automation</div>
-                        <h3>Rain-Sensing System</h3>
-                        <p>Automated moisture-sensing system using Arduino to trigger mechanical responses (DC motor) upon detecting rainfall levels.</p>
+                        <p>Digital hostel management using QR code movement tracking.</p>
                     </article>
                 </div>
             </div>
@@ -97,18 +86,17 @@
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="content">
-            <div class="section-container">
-                <h2 class="section-title">Let's Collaborate</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <p>Always looking for interesting projects and hardware challenges.</p>
-                        <p><b>Email:</b> sohannale603@gmail.com</p>
-                        <p><b>Phone:</b> +91 73502 25512</p>
+            <div class="minimal-container">
+                <h2 class="ghost-title">Connect</h2>
+                <div class="contact-flex">
+                    <div class="contact-details">
+                        <p>sohannale603@gmail.com</p>
+                        <p>+91 73502 25512</p>
                     </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
+                    <form class="minimal-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" rows="4" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
