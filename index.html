@@ -7,20 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
+    <!-- NAVIGATION -->
     <header class="nav">
         <div class="logo">●</div>
-        <nav>
+ 
+        <!-- Desktop links -->
+        <nav class="nav-links">
             <button onclick="showTab('home')">Home</button>
             <button onclick="showTab('about')">About</button>
             <button onclick="showTab('projects')">Projects</button>
             <button onclick="showTab('contact')">Contact</button>
         </nav>
         <button class="contact-btn" onclick="showTab('contact')">Get in Touch</button>
+ 
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" aria-label="Open menu" onclick="toggleDrawer()">
+            <span></span><span></span><span></span>
+        </button>
     </header>
-
+ 
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <button class="drawer-close" onclick="toggleDrawer()">✕</button>
+        <button onclick="showTab('home');    toggleDrawer()">Home</button>
+        <button onclick="showTab('about');   toggleDrawer()">About</button>
+        <button onclick="showTab('projects');toggleDrawer()">Projects</button>
+        <button onclick="showTab('contact'); toggleDrawer()">Contact</button>
+    </div>
+ 
     <main>
-        <!-- HOME SECTION -->
+ 
+        <!-- HOME -->
         <section id="home" class="content active">
             <div class="hero-layout">
                 <div class="hero-text-block">
@@ -28,20 +46,19 @@
                     <div class="hero-meta">
                         <span class="dot-decorator"></span>
                         <p class="hero-subtext">
-                            Electronics & Telecommunication Engineer<br>
-                            Specializing in Embedded Systems & IoT.
+                            Electronics &amp; Telecommunication<br>
+                            Embedded Systems &amp; IoT
                         </p>
                     </div>
                 </div>
-                
                 <div class="hero-visual">
                     <div class="edge-fade"></div>
                     <img src="your-photo.jpg" alt="Sohan Nale" class="hero-portrait">
                 </div>
             </div>
         </section>
-
-        <!-- ABOUT SECTION -->
+ 
+        <!-- ABOUT -->
         <section id="about" class="content">
             <div class="minimal-container">
                 <h2 class="ghost-title">Expertise</h2>
@@ -49,23 +66,21 @@
                     <div class="bio-main">
                         <p class="lead">Bridging abstract logic and tangible hardware.</p>
                         <p>I am an ENTC student at MITAOE focusing on physical computing and hardware innovation. I specialize in embedded systems and circuit design for reliable IoT solutions.</p>
-                        
                         <div class="technical-highlight">
                             <p><b>Hardware Engineering:</b> I specialize in engineering full signal paths and the end-to-end design, prototyping, and assembly of custom-etched PCBs.</p>
                         </div>
-
                         <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="minimal-btn">Download CV</a>
                     </div>
                     <div class="skills-sidebar">
-                        <div class="skill-item"><span>EDA & Simulation</span> Proteus, KiCAD, Multisim</div>
-                        <div class="skill-item"><span>Firmware & IoT</span> Python, C, ESP32, Arduino</div>
-                        <div class="skill-item"><span>Hardware R&D</span> PCB Design, Circuit Analysis</div>
+                        <div class="skill-item"><span>EDA &amp; Simulation</span>Proteus, KiCAD, Multisim</div>
+                        <div class="skill-item"><span>Firmware &amp; IoT</span>Python, C, ESP32, Arduino</div>
+                        <div class="skill-item"><span>Hardware R&amp;D</span>PCB Design, Circuit Analysis</div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- PROJECTS SECTION -->
+ 
+        <!-- PROJECTS -->
         <section id="projects" class="content">
             <div class="minimal-container">
                 <h2 class="ghost-title">Projects</h2>
@@ -93,8 +108,8 @@
                 </div>
             </div>
         </section>
-
-        <!-- CONTACT SECTION -->
+ 
+        <!-- CONTACT -->
         <section id="contact" class="content">
             <div class="minimal-container">
                 <h2 class="ghost-title">Connect</h2>
@@ -103,7 +118,7 @@
                         <p>sohannale603@gmail.com</p>
                         <p>+91 73502 25512</p>
                     </div>
-                    <form class="minimal-form">
+                    <form class="minimal-form" onsubmit="return false;">
                         <input type="text" placeholder="Name" required>
                         <input type="email" placeholder="Email" required>
                         <textarea placeholder="Message" rows="4" required></textarea>
@@ -112,15 +127,22 @@
                 </div>
             </div>
         </section>
+ 
     </main>
-
+ 
     <script>
         function showTab(tabId) {
-            const sections = document.querySelectorAll('.content');
-            sections.forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.content').forEach(s => s.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            window.scrollTo(0,0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+ 
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobileDrawer');
+            drawer.classList.toggle('open');
+            document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
         }
     </script>
+ 
 </body>
 </html>
