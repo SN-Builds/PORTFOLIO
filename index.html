@@ -1,213 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohan Nale | Portfolio</title>
-    
-    <style>
-        :root { 
-            --a: #7cfc00; 
-            --bg: #000; 
-            --fg: #fff; 
-            --s: #666; 
-        }
-
-        * { 
-            box-sizing: border-box; 
-            font-family: system-ui, -apple-system, sans-serif; 
-        }
-
-        body { 
-            margin: 0; 
-            background: var(--bg); 
-            color: var(--fg); 
-            line-height: 1.6; 
-        }
-
-        /* --- Navigation --- */
-        nav { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            padding: 24px 40px; 
-            position: sticky; 
-            top: 0; 
-            background: #000; 
-            z-index: 1000; 
-            border-bottom: 1px solid #1a1a1a; 
-        }
-
-        .logo { color: var(--a); font-weight: bold; font-size: 1.4rem; }
-
-        nav div button { 
-            background: none; 
-            border: none; 
-            color: var(--s); 
-            cursor: pointer; 
-            font-size: 11px; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-            margin-left: 24px; 
-        }
-
-        nav div button:hover { color: var(--fg); }
-
-        /* --- Sections --- */
-        section { 
-            display: none; 
-            padding: 100px 40px; 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            min-height: 90vh; 
-        }
-
-        section.active { display: block; }
-
-        h1, h2, h3 { text-transform: uppercase; letter-spacing: -1px; margin: 0; }
-        h1 { font-size: clamp(3rem, 10vw, 6rem); line-height: 0.9; }
-        h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; }
-
-        /* --- Home --- */
-        .profile-img { 
-            width: 160px; height: 160px; border-radius: 50%; 
-            object-fit: cover; border: 2px solid var(--a); 
-            margin-bottom: 30px; filter: grayscale(100%); 
-        }
-
-        /* --- About --- */
-        .lead { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; margin-bottom: 20px; font-weight: 300; }
-        .highlight-box { margin: 30px 0; border-left: 2px solid var(--a); padding-left: 20px; }
-
-        /* --- Grid --- */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 40px; 
-            margin-top: 50px; 
-        }
-
-        .card { border-top: 1px solid #1a1a1a; padding-top: 20px; }
-        .card h3 { margin: 10px 0; font-size: 1.3rem; letter-spacing: 0; }
-        .card p, .s-text { color: var(--s); font-size: 14px; }
-
-        /* --- UI --- */
-        .btn { 
-            display: inline-block; border: 1px solid var(--a); color: var(--a); 
-            padding: 12px 35px; text-decoration: none; font-size: 11px; 
-            font-weight: bold; letter-spacing: 1px; margin-top: 30px; 
-            text-transform: uppercase; 
-        }
-
-        /* --- Forms --- */
-        input, textarea { 
-            width: 100%; background: none; border: none; 
-            border-bottom: 1px solid #222; color: #fff; 
-            padding: 15px 0; margin-bottom: 25px; outline: none; 
-        }
-
-        button[type="submit"] { 
-            background: var(--a); border: none; padding: 12px 40px; 
-            font-weight: bold; cursor: pointer; text-transform: uppercase; 
-        }
-
-        @media (max-width: 800px) { section { padding: 80px 20px; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omkar Shinde | Portfolio</title>
+  <style>
+    :root { --bg: #0a0a0f; --text: #e8e8f0; --accent: #00e5ff; --surface: #111118; --border: #1e1e2e; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+    html { scroll-behavior: smooth; }
+    a { text-decoration: none; color: inherit; }
+    nav { display: flex; justify-content: space-between; padding: 1.2rem 5%; background: rgba(10,10,15,0.9); position: sticky; top: 0; border-bottom: 1px solid var(--border); z-index: 100; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-links a:hover { color: var(--accent); }
+    section { padding: 6rem 5%; max-width: 1000px; margin: auto; }
+    h1 { font-size: clamp(3rem, 8vw, 5rem); line-height: 1.1; margin-bottom: 1rem; }
+    h1 span { color: var(--accent); }
+    h2 { font-size: 2.2rem; margin-bottom: 2rem; border-bottom: 3px solid #ff4d6d; display: inline-block; padding-bottom: 0.3rem; }
+    .btn { display: inline-block; padding: 0.8rem 1.8rem; background: var(--accent); color: var(--bg); font-weight: bold; text-transform: uppercase; border-radius: 2px; margin-top: 1.5rem; transition: 0.2s; border: none; cursor: pointer; }
+    .btn:hover { background: #ff4d6d; transform: translateY(-2px); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+    .card { background: var(--surface); padding: 1.8rem; border-radius: 4px; border: 1px solid var(--border); transition: 0.3s; }
+    .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+    .tag { font-size: 0.75rem; border: 1px solid var(--border); padding: 0.3rem 0.6rem; border-radius: 2px; margin-right: 0.5rem; color: #a0a0c0; }
+    .skills-block { background: var(--surface); padding: 1.8rem; border: 1px solid var(--border); border-radius: 4px; }
+    .skill { margin-bottom: 1.2rem; font-size: 0.9rem; }
+    .skill span { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
+    .skill-bar { background: var(--border); height: 4px; border-radius: 2px; }
+    .skill-fill { background: linear-gradient(90deg, var(--accent), #ff4d6d); height: 100%; border-radius: 2px; }
+    input, textarea { width: 100%; padding: 0.9rem; margin-bottom: 1rem; background: var(--surface); border: 1px solid var(--border); color: white; border-radius: 2px; outline: none; }
+    input:focus, textarea:focus { border-color: var(--accent); }
+    footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; font-size: 0.85rem; color: #5a5a7a; }
+    @media (max-width: 600px) { .nav-links { display: none; } }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <span class="logo">●</span>
-        <div>
-            <button onclick="tab('home')">Home</button>
-            <button onclick="tab('about')">About</button>
-            <button onclick="tab('projects')">Projects</button>
-            <button onclick="tab('contact')">Contact</button>
-        </div>
-    </nav>
+  <nav>
+    <strong style="color:var(--accent); letter-spacing:2px;">OS_</strong>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="home" class="active">
-        <img src="your-photo.jpg" alt="Sohan Nale" class="profile-img">
-        <h1>Sohan<br>Nale</h1>
-        <p class="s-text" style="margin-top: 20px; text-transform: uppercase;">
-            Electronics & Telecommunication<br>Embedded Systems & IoT
-        </p>
-        <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="btn">Download CV</a>
-    </section>
+  <section id="home">
+    <p style="color:var(--accent); font-family:monospace; letter-spacing:2px; margin-bottom:1rem;">// First Year E&TC Engineer</p>
+    <h1>Omkar <br><span>Shinde.</span></h1>
+    <p style="font-size:1.15rem; color:#a0a0c0; margin-top:1rem;">Exploring circuits, signals & code — <br><strong style="color:white;">Electronics & Telecommunication Engineering</strong>, First Year.</p>
+    <a href="#projects" class="btn">View Projects →</a>
+  </section>
 
-    <section id="about">
-        <h2>Expertise</h2>
-        <p class="lead">Bridging abstract logic and tangible hardware.</p>
-        <p class="s-text" style="max-width: 600px;">
-            I am an ENTC student at MIT Academy of Engineering (MITAOE) focusing on physical computing and hardware innovation. 
-            I specialize in embedded systems and circuit design for reliable IoT solutions.
-        </p>
-        <div class="highlight-box">
-            <p style="margin: 0; max-width: 550px;">
-                <b>Hardware Engineering:</b> I specialize in engineering full signal paths and the end-to-end design, prototyping, and assembly of custom-etched PCBs.
-            </p>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>EDA & Simulation</h3>
-                <p>Proteus, KiCAD, Multisim</p>
-            </div>
-            <div class="card">
-                <h3>Firmware & IoT</h3>
-                <p>Python (NumPy, Pandas), C, ESP32, Arduino</p>
-            </div>
-            <div class="card">
-                <h3>Hardware R&D</h3>
-                <p>PCB Design, Circuit Analysis, Signal Path Engineering</p>
-            </div>
-        </div>
-    </section>
+  <section id="about">
+    <h2>Who I Am</h2>
+    <div class="grid">
+      <div style="color:#a0a0c0; font-size:1.05rem;">
+        <p style="margin-bottom:1rem;">Hey! I'm <strong style="color:white;">Omkar Shinde</strong>, a first-year student pursuing <strong style="color:white;">Electronics & Telecommunication Engineering</strong>. I'm passionate about understanding how technology works at its core — from signals to software.</p>
+        <p style="margin-bottom:1rem;">I'm currently building my foundation in <strong style="color:white;">circuit theory, analog electronics, and programming</strong>. I love tinkering with hardware and writing code that bridges the physical and digital worlds.</p>
+        <p>When I'm not studying, I enjoy exploring embedded systems, listening to music, and solving logic puzzles.</p>
+      </div>
+      <div class="skills-block">
+        <h3 style="color:var(--accent); font-family:monospace; margin-bottom:1.5rem; font-size:0.85rem;">// Skills & Learning</h3>
+        <div class="skill"><span><b>Circuit Analysis</b> 75%</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+        <div class="skill"><span><b>C Programming</b> 65%</span><div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div></div>
+        <div class="skill"><span><b>Digital Electronics</b> 70%</span><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+        <div class="skill"><span><b>Arduino / Embedded</b> 50%</span><div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div></div>
+        <div class="skill"><span><b>HTML & CSS</b> 60%</span><div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>PIR Motion Alarm</h3>
-                <p>A real-time security system detecting infrared signatures of human movement using a logic-controlled circuit.</p>
-            </div>
-            <div class="card">
-                <h3>Gesture Control</h3>
-                <p>Engineered an ESP32-based transmitter translating hand gestures into wireless control signals for system attachments.</p>
-            </div>
-            <div class="card">
-                <h3>SwiftPass App</h3>
-                <p>Digital hostel management application using QR code movement tracking and real-time data logging.</p>
-            </div>
-            <div class="card">
-                <h3>Rain-Sensing Automation</h3>
-                <p>Automated moisture-sensing system using Arduino to trigger mechanical responses upon detecting rainfall.</p>
-            </div>
-        </div>
-    </section>
+  <section id="projects">
+    <h2>What I've Built</h2>
+    <div class="grid">
+      <div class="card">
+        <div style="color:#ff4d6d; font-family:monospace; font-size:0.75rem; margin-bottom:1rem;">Project — 01</div>
+        <h3 style="margin-bottom:0.7rem;">LED Blinking Circuit</h3>
+        <p style="color:#a0a0c0; font-size:0.9rem; margin-bottom:1.2rem;">Designed a 555-timer-based LED blinking circuit with adjustable frequency using variable resistors. Explored astable multivibrator operation.</p>
+        <div><span class="tag">555 Timer</span><span class="tag">Analog</span><span class="tag">Hardware</span></div>
+      </div>
+      <div class="card">
+        <div style="color:#ff4d6d; font-family:monospace; font-size:0.75rem; margin-bottom:1rem;">Project — 02</div>
+        <h3 style="margin-bottom:0.7rem;">Arduino Temperature Monitor</h3>
+        <p style="color:#a0a0c0; font-size:0.9rem; margin-bottom:1.2rem;">Built a basic temperature monitoring system using an Arduino Uno and DHT11 sensor that displays readings on a 16×2 LCD screen.</p>
+        <div><span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">C++</span></div>
+      </div>
+      <div class="card">
+        <div style="color:#ff4d6d; font-family:monospace; font-size:0.75rem; margin-bottom:1rem;">Project — 03</div>
+        <h3 style="margin-bottom:0.7rem;">Binary to Decimal Converter</h3>
+        <p style="color:#a0a0c0; font-size:0.9rem; margin-bottom:1.2rem;">Implemented a logic-gate-level binary-to-decimal converter on a breadboard using ICs. Verified truth tables and gate combinations.</p>
+        <div><span class="tag">Digital Logic</span><span class="tag">ICs</span><span class="tag">Proteus</span></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Connect</h2>
-        <div style="margin-bottom: 40px;">
-            <p style="margin: 5px 0;">sohannale603@gmail.com</p>
-            <p style="margin: 5px 0;">+91 73502 25512</p>
-        </div>
-        <form onsubmit="return false;">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="grid">
+      <div style="color:#a0a0c0;">
+        <p style="margin-bottom:2rem; line-height:1.8;">I'm open to collaborations, internships, and learning opportunities. Feel free to reach out!</p>
+        <p style="margin-bottom:1rem; border:1px solid var(--border); padding:0.8rem; border-radius:2px;">✉ omkar@example.com</p>
+        <p style="margin-bottom:1rem; border:1px solid var(--border); padding:0.8rem; border-radius:2px;">💼 linkedin.com/in/omkarshinde</p>
+        <p style="margin-bottom:1rem; border:1px solid var(--border); padding:0.8rem; border-radius:2px;">🐙 github.com/omkarshinde</p>
+      </div>
+      <form onsubmit="event.preventDefault(); this.querySelector('.btn').textContent = 'Message Sent ✓'; this.querySelector('.btn').style.background = '#00c896';">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn" style="margin-top:0; width:100%;">Send Message →</button>
+      </form>
+    </div>
+  </section>
 
-    <script>
-        function tab(id) {
-            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-            const target = document.getElementById(id);
-            if (target) {
-                target.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-    </script>
+  <footer>
+    <p>© 2025 Omkar Shinde — E&TC Engineering, First Year</p>
+  </footer>
+
 </body>
 </html>
