@@ -7,142 +7,103 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-    <!-- NAVIGATION -->
-    <header class="nav">
-        <div class="logo">●</div>
- 
-        <!-- Desktop links -->
-        <nav class="nav-links">
-            <button onclick="showTab('home')">Home</button>
-            <button onclick="showTab('about')">About</button>
-            <button onclick="showTab('projects')">Projects</button>
-            <button onclick="showTab('contact')">Contact</button>
-        </nav>
-        <button class="contact-btn" onclick="showTab('contact')">Get in Touch</button>
- 
-        <!-- Hamburger (mobile) -->
-        <button class="hamburger" aria-label="Open menu" onclick="toggleDrawer()">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
- 
-    <!-- Mobile Drawer -->
-    <div class="mobile-drawer" id="mobileDrawer">
-        <button class="drawer-close" onclick="toggleDrawer()">✕</button>
-        <button onclick="showTab('home');    toggleDrawer()">Home</button>
-        <button onclick="showTab('about');   toggleDrawer()">About</button>
-        <button onclick="showTab('projects');toggleDrawer()">Projects</button>
-        <button onclick="showTab('contact'); toggleDrawer()">Contact</button>
-    </div>
- 
-    <main>
- 
-        <!-- HOME -->
-        <section id="home" class="content active">
-            <div class="hero-layout">
-                <div class="hero-text-block">
-                    <h1 class="hero-name">Sohan<br>Nale</h1>
-                    <div class="hero-meta">
-                        <span class="dot-decorator"></span>
-                        <p class="hero-subtext">
-                            Electronics &amp; Telecommunication<br>
-                            Embedded Systems &amp; IoT
-                        </p>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="edge-fade"></div>
-                    <img src="your-photo.jpg" alt="Sohan Nale" class="hero-portrait">
-                </div>
+
+    <nav>
+        <span class="logo">●</span>
+        <div>
+            <button onclick="tab('home')">Home</button>
+            <button onclick="tab('about')">About</button>
+            <button onclick="tab('projects')">Projects</button>
+            <button onclick="tab('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="active">
+        <img src="your-photo.jpg" alt="Sohan Nale" class="profile-img">
+        <h1>Sohan<br>Nale</h1>
+        <p class="s-text" style="margin-top: 20px; text-transform: uppercase;">
+            Electronics & Telecommunication<br>Embedded Systems & IoT
+        </p>
+        <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="btn">Download CV</a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>Expertise</h2>
+        <p class="lead">Bridging abstract logic and tangible hardware.</p>
+        <p class="s-text" style="max-width: 600px;">
+            I am an ENTC student at MIT Academy of Engineering (MITAOE) focusing on physical computing and hardware innovation. 
+            I specialize in embedded systems and circuit design for reliable IoT solutions.
+        </p>
+        <div class="highlight-box">
+            <p style="margin: 0; max-width: 550px;">
+                <b>Hardware Engineering:</b> I specialize in engineering full signal paths and the end-to-end design, prototyping, and assembly of custom-etched PCBs.
+            </p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>EDA & Simulation</h3>
+                <p>Proteus, KiCAD, Multisim</p>
             </div>
-        </section>
- 
-        <!-- ABOUT -->
-        <section id="about" class="content">
-            <div class="minimal-container">
-                <h2 class="ghost-title">Expertise</h2>
-                <div class="split-content">
-                    <div class="bio-main">
-                        <p class="lead">Bridging abstract logic and tangible hardware.</p>
-                        <p>I am an ENTC student at MITAOE focusing on physical computing and hardware innovation. I specialize in embedded systems and circuit design for reliable IoT solutions.</p>
-                        <div class="technical-highlight">
-                            <p><b>Hardware Engineering:</b> I specialize in engineering full signal paths and the end-to-end design, prototyping, and assembly of custom-etched PCBs.</p>
-                        </div>
-                        <a href="https://drive.google.com/file/d/1M7vM88KBSl25Bqe6lRIIroJo8MWIdKm3/view?usp=drivesdk" target="_blank" class="minimal-btn">Download CV</a>
-                    </div>
-                    <div class="skills-sidebar">
-                        <div class="skill-item"><span>EDA &amp; Simulation</span>Proteus, KiCAD, Multisim</div>
-                        <div class="skill-item"><span>Firmware &amp; IoT</span>Python, C, ESP32, Arduino</div>
-                        <div class="skill-item"><span>Hardware R&amp;D</span>PCB Design, Circuit Analysis</div>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Firmware & IoT</h3>
+                <p>Python (NumPy, Pandas), C, ESP32, Arduino</p>
             </div>
-        </section>
- 
-        <!-- PROJECTS -->
-        <section id="projects" class="content">
-            <div class="minimal-container">
-                <h2 class="ghost-title">Projects</h2>
-                <div class="works-grid">
-                    <article class="work-item">
-                        <span class="work-num">01</span>
-                        <h3>PIR Motion Alarm</h3>
-                        <p>A real-time security system detecting infrared signatures of human movement using a logic-controlled circuit.</p>
-                    </article>
-                    <article class="work-item">
-                        <span class="work-num">02</span>
-                        <h3>Gesture Control</h3>
-                        <p>Engineered an ESP32-based transmitter translating hand gestures into wireless control signals for system attachments.</p>
-                    </article>
-                    <article class="work-item">
-                        <span class="work-num">03</span>
-                        <h3>SwiftPass App</h3>
-                        <p>Digital hostel management application using QR code movement tracking and real-time data logging.</p>
-                    </article>
-                    <article class="work-item">
-                        <span class="work-num">04</span>
-                        <h3>Rain-Sensing Automation</h3>
-                        <p>Automated moisture-sensing system using Arduino to trigger mechanical responses upon detecting rainfall.</p>
-                    </article>
-                </div>
+            <div class="card">
+                <h3>Hardware R&D</h3>
+                <p>PCB Design, Circuit Analysis, Signal Path Engineering</p>
             </div>
-        </section>
- 
-        <!-- CONTACT -->
-        <section id="contact" class="content">
-            <div class="minimal-container">
-                <h2 class="ghost-title">Connect</h2>
-                <div class="contact-flex">
-                    <div class="contact-details">
-                        <p>sohannale603@gmail.com</p>
-                        <p>+91 73502 25512</p>
-                    </div>
-                    <form class="minimal-form" onsubmit="return false;">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Message" rows="4" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>PIR Motion Alarm</h3>
+                <p>A real-time security system detecting infrared signatures of human movement using a logic-controlled circuit.</p>
             </div>
-        </section>
- 
-    </main>
- 
+            <div class="card">
+                <h3>Gesture Control</h3>
+                <p>Engineered an ESP32-based transmitter translating hand gestures into wireless control signals for system attachments.</p>
+            </div>
+            <div class="card">
+                <h3>SwiftPass App</h3>
+                <p>Digital hostel management application using QR code movement tracking and real-time data logging.</p>
+            </div>
+            <div class="card">
+                <h3>Rain-Sensing Automation</h3>
+                <p>Automated moisture-sensing system using Arduino to trigger mechanical responses upon detecting rainfall.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Connect</h2>
+        <div style="margin-bottom: 40px;">
+            <p style="margin: 5px 0;">sohannale603@gmail.com</p>
+            <p style="margin: 5px 0;">+91 73502 25512</p>
+        </div>
+        <form onsubmit="return false;">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
     <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.content').forEach(s => s.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
- 
-        function toggleDrawer() {
-            const drawer = document.getElementById('mobileDrawer');
-            drawer.classList.toggle('open');
-            document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+        function tab(id) {
+            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
     </script>
- 
 </body>
 </html>
